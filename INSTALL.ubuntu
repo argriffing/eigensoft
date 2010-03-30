@@ -1,0 +1,20 @@
+This is one way that eigensoft has been installed
+on a Ubuntu computer.
+
+First install the dependencies:
+	gfortran
+	liblapack-dev
+
+Now cd to the src directory and build as follows:
+	$ make all
+	$ make install
+
+At this point you should have some files in the eigensoft/bin directory.
+Note that the installation does not require admin privileges
+and does not put files anywhere outside of the eigensoft directory tree.
+
+To uninstall, cd to the src directory and run:
+	$ make clobber
+
+To check that eigensoft has reverted to the pre-installed state,
+check git status if eigensoft has been cloned from a git repo.
