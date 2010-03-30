@@ -1,0 +1,7 @@
+genotypename:    example.geno
+snpname:         example.snp
+indivname:       example.ind
+evecoutname:     example.evec
+evaloutname:     example.eval
+altnormstyle:    NO 
+numoutevec:      2
