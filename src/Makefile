@@ -84,8 +84,7 @@ install:	all	tables
 
 uninstall:
 	rm -f $(NLIB) tables
-	cd  $(TOP) 
-	rm -f $(PROGS) $(PERLPROGS)
+	cd  $(TOP); rm -f $(PROGS) $(PERLPROGS)
 
 $(M1): nicklib $(M1O)
 	$(FF) -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M1) $(M1O) $(NLIB) -lm -llapack -latlas -l$(BLAS) -Wimplicit 
