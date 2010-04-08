@@ -87,10 +87,10 @@ uninstall:
 	cd  $(TOP); rm -f $(PROGS) $(PERLPROGS)
 
 $(M1): nicklib $(M1O)
-	$(FF) -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M1) $(M1O) $(NLIB) -lm -llapack -l$(BLAS) -Wimplicit 
+	$(FF) -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M1) $(M1O) $(NLIB) -lm -llapack -latlas -l$(BLAS) -Wimplicit 
 
 $(M1Z): nicklib $(M1ZO)
-	$(FF) -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M1Z) $(M1ZO) $(NLIB)  -lm -llapack -l$(BLAS) -Wimplicit
+	$(FF) -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M1Z) $(M1ZO) $(NLIB)  -lm -latlas -llapack -l$(BLAS) -Wimplicit
 
 $(M2): nicklib $(M2O)
 	gcc -I$(IDIR) $(DEBUG_OPTIONS) -lm  -o $(M2) $(M2O) $(NLIB) -Wimplicit
@@ -105,10 +105,10 @@ $(M5): nicklib $(M5O)
 	gcc  -I$(IDIR) $(DEBUG_OPTIONS) -lm  -o $(M5) $(M5O) $(NLIB) -Wimplicit
 
 $(M6): nicklib $(M6O)
-	$(FF)  -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M6) $(M6O) $(NLIB) -lm -llapack -l$(BLAS) -Wimplicit
+	$(FF)  -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M6) $(M6O) $(NLIB) -lm -latlas -llapack -l$(BLAS) -Wimplicit
 
 $(M7): nicklib $(M7O)
-	$(FF)  -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M7) $(M7O) $(NLIB) -lm -llapack -l$(BLAS)  -Wimplicit
+	$(FF)  -I$(IDIR) $(DEBUG_OPTIONS) -pthread -o $(M7) $(M7O) $(NLIB) -lm -latlas -llapack -l$(BLAS)  -Wimplicit
 
 $(M8): nicklib $(M8O)
 	gcc  -I$(IDIR) $(DEBUG_OPTIONS) -o $(M8) $(M8O) $(NLIB) -lm  -Wimplicit
