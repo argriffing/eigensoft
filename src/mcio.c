@@ -287,7 +287,7 @@ int readsnpdata(SNPDATA **snpraw, char *fname)
     sdpt = snpraw[num] ;
     sdpt -> inputrow = num ;
 
-    if (strlen(spt[0]) >= IDSIZE) fatalx("ID too long\n", spt[0]) ;
+    if (strlen(spt[0]) >= IDSIZE) fatalx("ID too long: %s\n", spt[0]) ;
     strcpy(sdpt->ID, spt[0]) ;
 
     
@@ -381,7 +381,7 @@ int readsnpmapdata(SNPDATA **snpraw, char *fname)
    if (skipit == NO) { 
     if (nsplit<4) fatalx("(readsnpmapdata) bad line: %s\n",line) ;
     sdpt = snpraw[num] ;
-    if (strlen(spt[1]) >= IDSIZE) fatalx("ID too long\n", spt[1]) ;
+    if (strlen(spt[1]) >= IDSIZE) fatalx("ID too long: %s\n", spt[1]) ;
     strcpy(sdpt->ID, spt[1]) ;
    
 
